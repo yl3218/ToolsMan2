@@ -23,10 +23,12 @@ class ReverseWords {
 	}
 
 	public static int rev(int i) {
-		if (i == 0)
+		if (i != iwords.length)
+			out += " ";
+		if (i == 0) {
 			return 1;
-		else {
-			out += iwords[i - 1] + " ";
+		} else {
+			out += iwords[i - 1];
 			return rev(i - 1);
 		}
 	}
